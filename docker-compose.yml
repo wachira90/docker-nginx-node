@@ -3,7 +3,7 @@ version: "3"
 services:
   node1:
     container_name: node1
-    image: node:14-alpine3.14
+    image: wachira90/node:14-alpine3.14
     restart: unless-stopped
     volumes:
       - ./app:/var/www/app/:rw
