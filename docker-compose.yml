@@ -5,9 +5,11 @@ services:
     container_name: node1
     image: wachira90/node:14-alpine3.14
     restart: unless-stopped
+    working_dir: /var/www/app/
     volumes:
       - ./app:/var/www/app/:rw
-    command: node /var/www/app/app.js
+#    command: node app.js
+    command: sh -c "yarn install && node app.js"
     expose:
       - 5000
 
